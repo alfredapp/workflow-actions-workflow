@@ -390,7 +390,7 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>workflows</string>
+				<string>{var:search_keyword}</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -932,7 +932,7 @@ Change default modifiers for actions in the [Workflow’s Configuration](https:/
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
-			<string>varsearch_keyword</string>
+			<string>search_keyword</string>
 		</dict>
 		<dict>
 			<key>config</key>
