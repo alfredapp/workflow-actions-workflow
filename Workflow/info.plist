@@ -6,6 +6,31 @@
 	<string>com.alfredapp.vitor.workflowactions</string>
 	<key>connections</key>
 	<dict>
+		<key>07A3EB01-1C05-49CD-A533-E8E5BB880E81</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F7C981DE-E513-40B7-B7C2-29AC94CF4CEF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>FEC66386-8BEF-44FE-9791-81DC92834468</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>FE4F7DBE-A4CD-427F-BE56-B709CE4119F5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>41866A63-8171-4837-A94F-A0AF91359B6C</key>
 		<array>
 			<dict>
@@ -132,6 +157,18 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
+				<string>EF8AEF2E-CDCC-46F3-AB68-A09B49752185</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>5E8E8BB5-8716-4D53-B167-225F8A763DC7</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>FD01589B-08C9-4DC9-A04D-61DD10299772</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -208,6 +245,32 @@
 				<false/>
 			</dict>
 		</array>
+		<key>CEDD24B9-58C9-4C3F-9819-87BBBCE26F78</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>07A3EB01-1C05-49CD-A533-E8E5BB880E81</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>EF8AEF2E-CDCC-46F3-AB68-A09B49752185</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CEDD24B9-58C9-4C3F-9819-87BBBCE26F78</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>FD01589B-08C9-4DC9-A04D-61DD10299772</key>
 		<array>
 			<dict>
@@ -257,6 +320,45 @@
 			<string>F0250922-2725-413D-B8E4-68E0DC701B46</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>function run(argv) {
+  const baseName = $(argv[0]).lastPathComponent.js
+  Application("com.runningwithcrayons.Alfred").revealWorkflow(baseName, { configuration: true })
+}</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>7</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>413C4FFE-0720-42A3-A57F-8FCC8474CE6B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>path</key>
+				<string>{query}/info.plist</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.revealfile</string>
+			<key>uid</key>
+			<string>907745E8-E871-4A4D-BF05-1BEC8D9CC9D9</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -341,6 +443,20 @@
 						<key>matchmode</key>
 						<integer>0</integer>
 						<key>matchstring</key>
+						<string>open_website</string>
+						<key>outputlabel</key>
+						<string>Website</string>
+						<key>uid</key>
+						<string>5E8E8BB5-8716-4D53-B167-225F8A763DC7</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:action}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
 						<string>export_workflow</string>
 						<key>outputlabel</key>
 						<string>Export</string>
@@ -371,6 +487,42 @@
 			<string>alfred.workflow.utility.conditional</string>
 			<key>uid</key>
 			<string>8EEC4F5F-F914-4DA1-A387-7D840E95D934</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/bin/realpath "${1}" | tr -d '\n'</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>4413D14C-432B-43D1-B568-D71B28427242</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>path</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.browseinterminal</string>
+			<key>uid</key>
+			<string>8844B88B-D838-4E7F-BD0E-BCD93C66D275</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -428,28 +580,23 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
+				<key>lastpathcomponent</key>
 				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>function run(argv) {
-  const baseName = $(argv[0]).lastPathComponent.js
-  Application("com.runningwithcrayons.Alfred").revealWorkflow(baseName, { configuration: true })
-}</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>7</integer>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Workflow has not configured website information</string>
+				<key>title</key>
+				<string>No Website Defined</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>413C4FFE-0720-42A3-A57F-8FCC8474CE6B</string>
+			<string>F7C981DE-E513-40B7-B7C2-29AC94CF4CEF</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -459,9 +606,9 @@
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>fixedorder</key>
-				<false/>
+				<true/>
 				<key>items</key>
-				<string>[{"title":"Edit in Alfred Preferences","arg":"edit_workflow"},{"title":"Open Configuration","arg":"edit_config"},{"title":"Open in Finder","arg":"open_finder"},{"title":"Open in Terminal","arg":"open_terminal"},{"title":"Reveal Data Folders","arg":"open_cache_data_folders"},{"title":"Export","arg":"export_workflow"},{"title":"Reload","arg":"reload_workflow"}]</string>
+				<string>[{"title":"Edit in Alfred Preferences","arg":"edit_workflow"},{"title":"Open Configuration","arg":"edit_config"},{"title":"Open in Finder","arg":"open_finder"},{"title":"Open in Terminal","arg":"open_terminal"},{"title":"Reveal Data Folders","arg":"open_cache_data_folders"},{"title":"Open Website","arg":"open_website","subtitle":""},{"title":"Export","arg":"export_workflow"},{"title":"Reload","arg":"reload_workflow"}]</string>
 				<key>matchmode</key>
 				<integer>0</integer>
 				<key>runningsubtext</key>
@@ -483,91 +630,17 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>path</key>
-				<string>{query}/info.plist</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.revealfile</string>
-			<key>uid</key>
-			<string>907745E8-E871-4A4D-BF05-1BEC8D9CC9D9</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>{var:workflow_folder}</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>action</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>55D7A8B4-B7FA-43A7-B33A-3A7A961A95C6</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
+				<key>openwith</key>
 				<string></string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>workflow_folder</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>8F6FD465-A80C-48A3-BEB1-D55FC1018BD0</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>/bin/realpath "${1}" | tr -d '\n'</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>11</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>4413D14C-432B-43D1-B568-D71B28427242</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>path</key>
+				<key>sourcefile</key>
 				<string></string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.browseinterminal</string>
+			<string>alfred.workflow.action.openfile</string>
 			<key>uid</key>
-			<string>8844B88B-D838-4E7F-BD0E-BCD93C66D275</string>
+			<string>4EE97345-8EA7-4FCE-97B6-00D25DBFC773</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -616,17 +689,131 @@ function run(argv) {
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>openwith</key>
+				<key>argument</key>
 				<string></string>
-				<key>sourcefile</key>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>workflow_folder</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>8F6FD465-A80C-48A3-BEB1-D55FC1018BD0</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:workflow_folder}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>action</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>55D7A8B4-B7FA-43A7-B33A-3A7A961A95C6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<true/>
+				<key>skipvarencode</key>
+				<true/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
 				<string></string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
+			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>4EE97345-8EA7-4FCE-97B6-00D25DBFC773</string>
+			<string>FE4F7DBE-A4CD-427F-BE56-B709CE4119F5</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/libexec/PlistBuddy -c "Print :webaddress" "${1}/info.plist"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>EF8AEF2E-CDCC-46F3-AB68-A09B49752185</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string></string>
+						<key>outputlabel</key>
+						<string>No Website</string>
+						<key>uid</key>
+						<string>FEC66386-8BEF-44FE-9791-81DC92834468</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>Open Website</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>07A3EB01-1C05-49CD-A533-E8E5BB880E81</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.transform</string>
+			<key>uid</key>
+			<string>CEDD24B9-58C9-4C3F-9819-87BBBCE26F78</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -728,29 +915,6 @@ printf "${workflow_file}"</string>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>/usr/bin/open ./CopyFile.app --args "${1}"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>11</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>AB7D97F2-E9D6-453B-90E2-A45F99D1D567</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
 				<string>function run(argv) {
@@ -768,6 +932,29 @@ printf "${workflow_file}"</string>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>46A368DC-850A-443B-81C3-9B2B8901E696</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>/usr/bin/open ./CopyFile.app --args "${1}"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>AB7D97F2-E9D6-453B-90E2-A45F99D1D567</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -789,19 +976,26 @@ Search installed workflows, ordered by recenly edited, via the `workflows` keywo
 Change default modifiers for actions in the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/).</string>
 	<key>uidata</key>
 	<dict>
+		<key>07A3EB01-1C05-49CD-A533-E8E5BB880E81</key>
+		<dict>
+			<key>xpos</key>
+			<real>1085</real>
+			<key>ypos</key>
+			<real>735</real>
+		</dict>
 		<key>413C4FFE-0720-42A3-A57F-8FCC8474CE6B</key>
 		<dict>
 			<key>xpos</key>
 			<real>855</real>
 			<key>ypos</key>
-			<real>160</real>
+			<real>165</real>
 		</dict>
 		<key>41866A63-8171-4837-A94F-A0AF91359B6C</key>
 		<dict>
 			<key>xpos</key>
 			<real>45</real>
 			<key>ypos</key>
-			<real>125</real>
+			<real>440</real>
 		</dict>
 		<key>4413D14C-432B-43D1-B568-D71B28427242</key>
 		<dict>
@@ -810,84 +1004,98 @@ Change default modifiers for actions in the [Workflow’s Configuration](https:/
 			<key>xpos</key>
 			<real>855</real>
 			<key>ypos</key>
-			<real>420</real>
+			<real>425</real>
 		</dict>
 		<key>46A368DC-850A-443B-81C3-9B2B8901E696</key>
 		<dict>
 			<key>xpos</key>
 			<real>855</real>
 			<key>ypos</key>
-			<real>845</real>
+			<real>985</real>
 		</dict>
 		<key>4EE97345-8EA7-4FCE-97B6-00D25DBFC773</key>
 		<dict>
 			<key>xpos</key>
 			<real>1040</real>
 			<key>ypos</key>
-			<real>575</real>
+			<real>580</real>
 		</dict>
 		<key>55D7A8B4-B7FA-43A7-B33A-3A7A961A95C6</key>
 		<dict>
 			<key>xpos</key>
 			<real>475</real>
 			<key>ypos</key>
-			<real>305</real>
+			<real>605</real>
 		</dict>
 		<key>8844B88B-D838-4E7F-BD0E-BCD93C66D275</key>
 		<dict>
 			<key>xpos</key>
 			<real>1040</real>
 			<key>ypos</key>
-			<real>420</real>
+			<real>425</real>
 		</dict>
 		<key>892F94E1-72D2-4113-91A4-92EFC4C676B7</key>
 		<dict>
 			<key>xpos</key>
 			<real>310</real>
 			<key>ypos</key>
-			<real>275</real>
+			<real>575</real>
 		</dict>
 		<key>8EEC4F5F-F914-4DA1-A387-7D840E95D934</key>
 		<dict>
 			<key>xpos</key>
 			<real>570</real>
 			<key>ypos</key>
-			<real>70</real>
+			<real>370</real>
 		</dict>
 		<key>8F6FD465-A80C-48A3-BEB1-D55FC1018BD0</key>
 		<dict>
 			<key>xpos</key>
 			<real>235</real>
 			<key>ypos</key>
-			<real>305</real>
+			<real>605</real>
 		</dict>
 		<key>907745E8-E871-4A4D-BF05-1BEC8D9CC9D9</key>
 		<dict>
 			<key>xpos</key>
 			<real>855</real>
 			<key>ypos</key>
-			<real>290</real>
+			<real>295</real>
 		</dict>
 		<key>9FA84F2B-4AA9-40A7-BC7C-4B7E6223B98D</key>
 		<dict>
 			<key>xpos</key>
 			<real>855</real>
 			<key>ypos</key>
-			<real>575</real>
+			<real>580</real>
 		</dict>
 		<key>AB7D97F2-E9D6-453B-90E2-A45F99D1D567</key>
 		<dict>
 			<key>xpos</key>
-			<real>1200</real>
+			<real>1245</real>
 			<key>ypos</key>
-			<real>845</real>
+			<real>985</real>
 		</dict>
 		<key>C3810D94-DD80-4422-8A25-6063E7667DAD</key>
 		<dict>
 			<key>xpos</key>
-			<real>1040</real>
+			<real>1075</real>
 			<key>ypos</key>
-			<real>730</real>
+			<real>870</real>
+		</dict>
+		<key>CEDD24B9-58C9-4C3F-9819-87BBBCE26F78</key>
+		<dict>
+			<key>xpos</key>
+			<real>1020</real>
+			<key>ypos</key>
+			<real>745</real>
+		</dict>
+		<key>EF8AEF2E-CDCC-46F3-AB68-A09B49752185</key>
+		<dict>
+			<key>xpos</key>
+			<real>855</real>
+			<key>ypos</key>
+			<real>715</real>
 		</dict>
 		<key>F0250922-2725-413D-B8E4-68E0DC701B46</key>
 		<dict>
@@ -896,19 +1104,33 @@ Change default modifiers for actions in the [Workflow’s Configuration](https:/
 			<key>ypos</key>
 			<real>35</real>
 		</dict>
+		<key>F7C981DE-E513-40B7-B7C2-29AC94CF4CEF</key>
+		<dict>
+			<key>xpos</key>
+			<real>1245</real>
+			<key>ypos</key>
+			<real>555</real>
+		</dict>
 		<key>F9E50BB0-4F6A-4439-B441-296DB6CCBDF0</key>
 		<dict>
 			<key>xpos</key>
-			<real>1200</real>
+			<real>1245</real>
 			<key>ypos</key>
-			<real>710</real>
+			<real>850</real>
 		</dict>
 		<key>FD01589B-08C9-4DC9-A04D-61DD10299772</key>
 		<dict>
 			<key>xpos</key>
 			<real>855</real>
 			<key>ypos</key>
-			<real>710</real>
+			<real>850</real>
+		</dict>
+		<key>FE4F7DBE-A4CD-427F-BE56-B709CE4119F5</key>
+		<dict>
+			<key>xpos</key>
+			<real>1245</real>
+			<key>ypos</key>
+			<real>715</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
@@ -962,6 +1184,10 @@ Change default modifiers for actions in the [Workflow’s Configuration](https:/
 						<string>open_data_cache_folders</string>
 					</array>
 					<array>
+						<string>Open Website</string>
+						<string>open_website</string>
+					</array>
+					<array>
 						<string>Export Workflow</string>
 						<string>export_workflow</string>
 					</array>
@@ -1006,6 +1232,10 @@ Change default modifiers for actions in the [Workflow’s Configuration](https:/
 					<array>
 						<string>Open Data Folders</string>
 						<string>open_data_cache_folders</string>
+					</array>
+					<array>
+						<string>Open Website</string>
+						<string>open_website</string>
 					</array>
 					<array>
 						<string>Export Workflow</string>
@@ -1054,6 +1284,10 @@ Change default modifiers for actions in the [Workflow’s Configuration](https:/
 						<string>open_data_cache_folders</string>
 					</array>
 					<array>
+						<string>Open Website</string>
+						<string>open_website</string>
+					</array>
+					<array>
 						<string>Export Workflow</string>
 						<string>export_workflow</string>
 					</array>
@@ -1100,6 +1334,10 @@ Change default modifiers for actions in the [Workflow’s Configuration](https:/
 						<string>open_data_cache_folders</string>
 					</array>
 					<array>
+						<string>Open Website</string>
+						<string>open_website</string>
+					</array>
+					<array>
 						<string>Export Workflow</string>
 						<string>export_workflow</string>
 					</array>
@@ -1144,6 +1382,10 @@ Change default modifiers for actions in the [Workflow’s Configuration](https:/
 					<array>
 						<string>Open Data Folders</string>
 						<string>open_data_cache_folders</string>
+					</array>
+					<array>
+						<string>Open Website</string>
+						<string>open_website</string>
 					</array>
 					<array>
 						<string>Export Workflow</string>
