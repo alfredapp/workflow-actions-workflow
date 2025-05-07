@@ -91,6 +91,7 @@ let modifiers: [String: ModifierAction.Details] = {
     ModifierAction("open_finder", subtitle: "Open in Finder"),
     ModifierAction("open_terminal", subtitle: "Open in Terminal"),
     ModifierAction("open_data_cache_folders", subtitle: "Reveal Data Folders"),
+    ModifierAction("open_website", subtitle: "Open Website"),
     ModifierAction("export_workflow", subtitle: "Export"),
     ModifierAction("reload_workflow", subtitle: "Reload"),
   ].reduce(into: [:]) { $0[$1.name] = $1.details }
