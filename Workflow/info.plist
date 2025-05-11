@@ -608,7 +608,7 @@
 				<key>fixedorder</key>
 				<true/>
 				<key>items</key>
-				<string>[{"title":"Edit in Alfred Preferences","arg":"edit_workflow"},{"title":"Open Configuration","arg":"edit_config"},{"title":"Open in Finder","arg":"open_finder"},{"title":"Open in Terminal","arg":"open_terminal"},{"title":"Reveal Data Folders","arg":"open_cache_data_folders"},{"title":"Open Website","arg":"open_website","subtitle":""},{"title":"Export","arg":"export_workflow"},{"title":"Reload","arg":"reload_workflow"}]</string>
+				<string>[{"title":"Edit in Alfred Preferences","arg":"edit_workflow"},{"title":"Open Configuration","arg":"edit_config"},{"title":"Open in Finder","arg":"open_finder"},{"title":"Open in Terminal","arg":"open_terminal"},{"title":"Reveal Data Folders","arg":"open_data_cache_folders"},{"title":"Open Website","arg":"open_website","subtitle":""},{"title":"Export","arg":"export_workflow"},{"title":"Reload","arg":"reload_workflow"}]</string>
 				<key>matchmode</key>
 				<integer>0</integer>
 				<key>runningsubtext</key>
