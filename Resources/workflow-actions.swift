@@ -88,6 +88,7 @@ let modifiers: [String: ModifierAction.Details] = {
   let actions = [
     ModifierAction("edit_workflow", subtitle: "Edit in Alfred Preferences"),
     ModifierAction("edit_config", subtitle: "Open Configuration"),
+    ModifierAction("edit_details", subtitle: "Edit Details"),
     ModifierAction("open_finder", subtitle: "Open in Finder"),
     ModifierAction("open_terminal", subtitle: "Open in Terminal"),
     ModifierAction("open_data_cache_folders", subtitle: "Reveal Data Folders"),
