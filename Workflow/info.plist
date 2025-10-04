@@ -1497,7 +1497,7 @@ Change default modifiers for actions in the [Workflow’s Configuration](https:/
 		</dict>
 	</array>
 	<key>version</key>
-	<string>25.1</string>
+	<string>25.2</string>
 	<key>webaddress</key>
 	<string>https://github.com/alfredapp/workflow-actions-workflow/</string>
 </dict>
